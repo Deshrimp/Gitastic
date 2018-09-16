@@ -8,6 +8,23 @@ $("#add").on("click", function(event) {
   Button.data("person", name)
   $("#myButtons").append(Button)
 })
+const initialSearches = [
+  "Pikachu",
+  "Charmander",
+  "Eevee",
+  "Squirtle",
+  "Lickatung",
+  "Meowth",
+  "Ekans",
+  "Koffing",
+  "Muk",
+  "Psyduck"
+]
+const initialButtons = initialSearches.map(
+  search =>
+    `<button class='generatedButton' data-person="${search}">${search}</button>`
+)
+$("#myButtons").append(initialButtons)
 // Event listener for all button elements
 console.log("The page was loaded and i can see this text")
 $("#myButtons").on("click", ".generatedButton", async function() {
