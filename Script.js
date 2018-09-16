@@ -13,10 +13,19 @@ console.log("The page was loaded and i can see this text")
 $("#myButtons").on("click", ".generatedButton", async function() {
   // In this case, the "this" keyword refers to the button that was clicked
   var person = $(this).data("person")
+  const queryURL =
+    "https://api.giphy.com/v1/gifs/search?q=" +
+    person +
+    "&api_key=dc6zaTOxFJmzC&limit=10"
 
+  // Performing our AJAX GET request
+  const response = await $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
   // Constructing a URL to search Giphy for the name of the person who said the quote
-  mport
   var { data: results } = response
+  $("#gifs-appear-here").text("")
   // Looping over every result item
   for (var i = 0; i < results.length; i++) {
     // Only taking action if the photo has an appropriate rating
