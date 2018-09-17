@@ -30,10 +30,11 @@ console.log("The page was loaded and i can see this text")
 $("#myButtons").on("click", ".generatedButton", async function() {
   // In this case, the "this" keyword refers to the button that was clicked
   var person = $(this).data("person")
+
   const queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
     person +
-    "&api_key=dc6zaTOxFJmzC&limit=10"
+    "&api_key=bVngz5WP33zjuUihdjRJXfSZQqDODhvh"
 
   // Performing our AJAX GET request
   const response = await $.ajax({
