@@ -4,7 +4,7 @@ $("#add").on("click", function(event) {
   var Button = $("<button>")
   var name = $("#exampleCheck1").val()
   Button.text(name)
-  Button.addClass("generatedButton")
+  Button.addClass("generatedButton bbtn btn-outline-secondary")
   Button.data("person", name)
   $("#myButtons").append(Button)
 })
@@ -22,11 +22,11 @@ const initialSearches = [
 ]
 const initialButtons = initialSearches.map(
   search =>
-    `<button class='generatedButton' data-person="${search}">${search}</button>`
+    `<button class='generatedButton bbtn btn-outline-secondary' data-person="${search}">${search}</button>`
 )
 $("#myButtons").append(initialButtons)
 // Event listener for all button elements
-console.log("The page was loaded and i can see this text")
+
 $("#myButtons").on("click", ".generatedButton", async function() {
   // In this case, the "this" keyword refers to the button that was clicked
   var person = $(this).data("person")
