@@ -15,3 +15,12 @@ button {
 p {
   color: aliceblue;
 }
+.btn-outline-success {
+  margin: 3rem 0rem 2rem 1rem;
+}
+.form-check-input {
+  margin: 1rem;
+}
+#addtext {
+  margin: 0rem 1rem;
+}
