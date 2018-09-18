@@ -3,10 +3,27 @@ body {
 }
 .container {
   background-color: rgb(214, 206, 189);
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /* used http://border-radius.com/ for border-radius generator */
 }
 button {
   padding: 0.5rem;
   margin: 1rem;
+  border-radius: 10%;
+  transition: all 0.5s ease-in;
+}
+#exampleCheck1 {
+  border-radius: 10%;
+}
+
+button:hover {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
 }
 .item {
   float: left;
@@ -23,4 +40,8 @@ p {
 }
 #addtext {
   margin: 0rem 1rem;
+}
+
+#gifs-appear-here {
+  display: inline-block;
 }
