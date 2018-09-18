@@ -8,3 +8,10 @@ button {
   padding: 0.5rem;
   margin: 1rem;
 }
+.item {
+  float: left;
+  margin: 1rem;
+}
+p {
+  color: aliceblue;
+}
